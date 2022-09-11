@@ -9,10 +9,7 @@ const connectDatabse = () => {
     })
     .then((data) => {
       console.log(`MongoDb is connected with server: ${data.connection.host}`);
-    })
-    .catch((err) => {
-      console.log(err);
     });
 };
 
-module.exports = connectDatabse
+module.exports = connectDatabse;
