@@ -51,7 +51,7 @@ exports.deleteProduct = catchAsyncErros(async (req, res, next) => {
 
 //Get all product
 exports.getAllProduct = catchAsyncErros(async (req, res) => {
-  const apiFeature = new ApiFeatures(Product.find(), req.query).search();
+  const apiFeature = new ApiFeatures(Product.find(), req.query).search().filter();
   //const products = await Product.find();
 
   const products = await apiFeature.query;
